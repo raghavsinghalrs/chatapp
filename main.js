@@ -22,7 +22,7 @@ app.post('/', (req, res, next) => {
             console.log(req.body.name, req.body.message);
             fs.appendFileSync('file.txt', ` ${req.body.name}: ${req.body.message}`);
         }
-        res.redirect('/');
+    res.redirect('/');
     } catch (err) {
         console.log(err);
         res.status(500).send('Internal Server Error');
